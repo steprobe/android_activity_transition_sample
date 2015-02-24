@@ -22,18 +22,11 @@ package com.example.android.activityscenetransitionbasic;
  */
 public class Item {
 
-    private static final String LARGE_BASE_URL = "http://storage.googleapis.com/androiddevelopers/sample_data/activity_transition/large/";
-    private static final String THUMB_BASE_URL = "http://storage.googleapis.com/androiddevelopers/sample_data/activity_transition/thumbs/";
-
     public static Item[] ITEMS = new Item[] {
-            new Item("Flying in the Light", "Romain Guy", "flying_in_the_light.jpg"),
-            new Item("Caterpillar", "Romain Guy", "caterpillar.jpg"),
-            new Item("Look Me in the Eye", "Romain Guy", "look_me_in_the_eye.jpg"),
-            new Item("Flamingo", "Romain Guy", "flamingo.jpg"),
-            new Item("Rainbow", "Romain Guy", "rainbow.jpg"),
-            new Item("Over there", "Romain Guy", "over_there.jpg"),
-            new Item("Jelly Fish 2", "Romain Guy", "jelly_fish_2.jpg"),
-            new Item("Lone Pine Sunset", "Romain Guy", "lone_pine_sunset.jpg"),
+            new Item("Flying in the Light", "Romain Guy", "file:///android_asset/1.jpg"),
+            new Item("Caterpillar", "Romain Guy", "file:///android_asset/2.jpg"),
+            new Item("Look Me in the Eye", "Romain Guy", "file:///android_asset/3.jpg"),
+            new Item("Flamingo", "Romain Guy", "file:///android_asset/4.jpg")
     };
 
     public static Item getItem(int id) {
@@ -68,11 +61,11 @@ public class Item {
     }
 
     public String getPhotoUrl() {
-        return LARGE_BASE_URL + mFileName;
+        return mFileName;
     }
 
     public String getThumbnailUrl() {
-        return THUMB_BASE_URL + mFileName;
+        return mFileName + ".thmb.jpg";
     }
 
 }
